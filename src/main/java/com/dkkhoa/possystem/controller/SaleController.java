@@ -60,7 +60,7 @@ public class SaleController {
         return "salehistory";
     }
 
-    @CrossOrigin("http://localhost:8080")
+//    @CrossOrigin
     @PostMapping("/sale_history/data")
     @ResponseBody
     public Map<String, Object> send_data(HttpSession session) {

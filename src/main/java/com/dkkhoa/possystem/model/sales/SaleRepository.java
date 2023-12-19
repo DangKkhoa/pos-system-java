@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Repository
 public interface SaleRepository extends CrudRepository<Sale, Integer> {
-    @Query("SELECT SUM(totalPrice) FROM Sale")
+    @Query("SELECT COALESCE(SUM(totalPrice), 0) FROM Sale")
     int getTotalRevenue();
 
 

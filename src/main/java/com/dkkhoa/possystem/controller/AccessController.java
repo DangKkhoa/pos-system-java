@@ -1,5 +1,6 @@
-package com.dkkhoa.possystem;
+package com.dkkhoa.possystem.controller;
 
+import com.dkkhoa.possystem.model.users.SessionUser;
 import com.dkkhoa.possystem.model.users.User;
 import com.dkkhoa.possystem.model.users.UserRepository;
 import jakarta.servlet.http.HttpSession;
@@ -35,7 +36,12 @@ public class AccessController {
             String passwordHashed = passwordEncoder.encode(password);
             System.out.println(passwordHashed);
             if (passwordEncoder.matches(password, authenticatingUser.getPassword())) {
-                session.setAttribute("user", authenticatingUser);
+                SessionUser sessionUser = new SessionUser(authenticatingUser.getUserId(), authenticatingUser.getUsername(), authenticatingUser.getFullname(), authenticatingUser.isAdmin(), authenticatingUser.getProfilePicture());
+//                System.out.println(sessionUser);
+                session.setAttribute("user", sessionUser);
+                if(authenticatingUser.isFirstLogin() && !authenticatingUser.isAdmin()) {
+                    return "redirect:/set_password";
+                }
                 return "redirect:/";
             }
             else {

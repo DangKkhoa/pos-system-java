@@ -1,4 +1,4 @@
-package com.dkkhoa.possystem;
+package com.dkkhoa.possystem.controller;
 import com.dkkhoa.possystem.model.saledetail.SaleDetailRepository;
 import com.dkkhoa.possystem.model.saledetail.TopFiveProducts;
 import com.dkkhoa.possystem.model.users.User;
