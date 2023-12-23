@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/details.css">
+    <title>Product Details</title>
+</head>
+<body>
+
+<h2>Product Details</h2>
+
+<p><strong>Product Name:</strong> <span th:text="${product.productName}"></span></p>
+<p><strong>Barcode:</strong> <span th:text="${product.barcode}"></span></p>
+<p><strong>Retail Price:</strong> <span th:text="${product.retailPrice}"></span></p>
+<p th:if="${isAdmin}"><strong>ImportPrice:</strong> <span th:text="${product.importPrice}"></span></p>
+
+<p><strong>Manufacturer:</strong> <span th:text="${product.manufacturer}"></span></p>
+<p><strong>Category:</strong> <span th:text="${product.category}"></span></p>
+<img th:src="${product.image}" alt="Product Image" style="max-width: 100%; height: auto;">
+
+<a th:href="@{'/products/' + ${product.id} + '/edit'}" class="btn btn-warning">Edit</a>
+<a th:href="@{'/products'}" class="btn btn-primary">Back to Product List</a>
+
+</body>
+</html>

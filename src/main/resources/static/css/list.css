@@ -1,0 +1,53 @@
+/* src/main/resources/static/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-info {
+    background-color: #3498db;
+}
+
+.btn-warning {
+    background-color: #f39c12;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+}

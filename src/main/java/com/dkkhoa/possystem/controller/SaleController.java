@@ -66,7 +66,6 @@ public class SaleController {
     public Map<String, Object> send_data(HttpSession session) {
         User user = (User) session.getAttribute("user");
 
-        // If admin, return monthly profit
         if(user.isAdmin()) {
             List<Object[]> profitEveryMonth = saledetailRepo.getAllMonthProfit();
 
