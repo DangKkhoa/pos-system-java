@@ -19,10 +19,10 @@
   <hr style="width: 80%; margin: auto;">
   <div class="nav-menu">
     <a href="/" class="url"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="/transaction" class="product-management url"><i class="fa-solid fa-cart-plus"></i> New Transaction</a>
+    <a href="/customers" class="product-management url"><i class="fa-solid fa-cart-plus"></i> New Transaction</a>
     <div th:if="${user.isAdmin()}">
     <a class="url" href="/salespersons"><i class="fa-solid fa-users"></i> Salespersons</a>
-    <a href="/customers" class="url"><i class="fa-solid fa-user-group"></i> Customers</a>
+    <a href="/customers/list" class="url"><i class="fa-solid fa-user-group"></i> Customers</a>
     </div>
       <a href="/products" class="product-management url"><i class="fa-solid fa-bag-shopping"></i> Products</a>
     <a class="url" href="/sale_history"><i class="fa-solid fa-clock-rotate-left"></i> Sale History</a>

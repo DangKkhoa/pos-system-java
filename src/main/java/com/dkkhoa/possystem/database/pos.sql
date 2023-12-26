@@ -62,6 +62,9 @@ CREATE TABLE `Sale_Details` (
 -- Password of admin is admin
 INSERT INTO `Users`(`user_id`, `username`, `password`, `email`, `fullname`, `is_admin`, `is_locked`) VALUES (1,'admin','$2b$10$GUX7D4isxJFeqX8hy5eB2OvJbKlXlJG3QNjhMOFOhtZam1PyrlC2K','admin@gmail.com', 'Admin', true,false);
 
+INSERT INTO `users` (`user_id`, `username`, `password`, `email`, `fullname`, `is_admin`, `profile_picture`, `is_locked`, `first_login`, `phone`, `token`) VALUES
+                                                                                                                                                               (2, 'huy', '$2y$06$Z.Ycxn.KHfjyFR/6KO1gnOuRUjcsLQ6JPOrZvp035PqdQlOu/kzoC', 'thienhuy0108@gmail.com', 'NguyenThienHuy', 0, '\"—Pngtree—wooden arrow design_6063891.png\"', 0, 0, '0395733423', '');
+
 ALTER TABLE `Users`
     MODIFY `user_id` int AUTO_INCREMENT, AUTO_INCREMENT = 2;
 COMMIT;
